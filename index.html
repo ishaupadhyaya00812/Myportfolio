@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/964046651d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            
+            <div class="logo-container">
+                <img src="/Images/Logo.jpg" class="logo">
+            </div>
+            
+
+            <div class="nav-icons">
+                <a href="#header"><i class="fa fa-home"></i></a>
+                <a href="#about"><i class="fa fa-user"></i></a>
+                <a href="#services"><i class="fa fa-cogs"></i></a>
+                <a href="#portfolio"><i class="fa fa-briefcase"></i></a>
+                <a href="#contact"><i class="fa fa-envelope"></i></a>
+            </div>
+            
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hello, I'm <span>Isha Upadhaya,</span><br>From Bangalore</h1>
+            </div>
+        </div>
+    </div>
+
+    <!----------- About Section ----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="/Images/Logo.jpg" alt="My Logo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Isha Upadhaya, a passionate front-end developer...</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>Cyber Security</span><br>ISO 27001</li>
+                            <li><span>Programming</span><br>Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024 - GRC Intern</span><br> at Affirms IT Solutions</li>
+                            <li><span>Courses</span><br>Software Testing, Cloud Computing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2025 - Pursuing BCA</span><br> at New Horizon College</li>
+                            <li><span>2022 - 12TH</span><br> From Sun Valley Academy, Assam</li>
+                            <li><span>2022 - 10TH</span><br> From Don Bosco School, Assam</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------ Services Section ---------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Custom web design services for visually appealing, user-friendly websites.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Creating intuitive, visually striking, and user-centric mobile experiences.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-lock"></i>
+                    <h2>Cyber Security</h2>
+                    <p>Protecting digital assets with advanced cybersecurity solutions.</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------- Portfolio Section ---------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Expertise</h1>
+            <div class="expertise-list">
+                <div class="expertise">
+                    <img src="/Images/html.png" alt="Project Image 1">
+                </div>
+                <div class="expertise">
+                    <img src="/Images/python.png" alt="Project Image 2">
+                </div>
+                <div class="expertise">
+                    <img src="/Images/iso-symbol.png" alt="Project Image 3">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---------- Contact Section ---------->
+    <div id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p><i class="fa fa-envelope"></i> ishaupadhaya51@gmail.com</p>
+                    <p><i class="fa fa-phone"></i> +91 93950 62354</p>
+                    <p><i class="fa fa-map-marker"></i> Bangalore, India</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="https://formspree.io/f/xjvqlqno" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------- JavaScript ---------->
+    <script>
+        function opentab(event, tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
